@@ -21,6 +21,9 @@ class Rational(val numerator: Int, val denominator: Int = 1) {
 
   if (denominator == 0)
     throw new IllegalArgumentException("Denominator must be non-zero") with NoStackTrace
+  
+  /** Returns a representation in text. */
+  override def toString = numerator + "/" + denominator
 }
 
 object Rational {
