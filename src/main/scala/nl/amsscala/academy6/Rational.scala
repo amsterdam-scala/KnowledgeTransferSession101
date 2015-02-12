@@ -44,6 +44,21 @@ class Rational(val numerator: Int, val denominator: Int = 1) {
 
   /** Returns `true` if this value is equal to x, `false` otherwise. */
   def ==(x: Rational) = (x.numerator, x.denominator) ==(numerator, denominator)
+      
+  /** Returns `true` if this value is not equal to x, `false` otherwise. */
+  def !=(x: Rational) = ! ==(x)
+
+  /** Returns `true` if this value is less than x, `false` otherwise. */
+  def <(x: Rational) = numerator * x.denominator < x.numerator * denominator
+
+  /** Returns `true` if this value is less than or equal to x, `false` otherwise. */
+  def <=(x: Rational) = ! >(x)
+
+  /** Returns `true` if this value is greater than x, `false` otherwise. */
+  def >(x: Rational) = numerator * x.denominator > x.numerator * denominator
+
+  /** Returns `true` if this value is greater than or equal to x, `false` otherwise. */
+  def >=(x: Rational) = ! <(x)
 
   /** Returns a representation in text. */
   override def toString = numerator + "/" + denominator

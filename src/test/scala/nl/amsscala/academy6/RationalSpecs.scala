@@ -144,15 +144,15 @@ class RationalSpecs extends FeatureSpec with GivenWhenThen with Matchers {
         x + (x * y) should equal(new Rational(5, 6))
       }
     }
-    /*
-      feature("comparations") {
+    // Sprint 04 Comparison operators
+      feature("comparisons") {
         scenario("should return true when 1/2 < 3/4") {
           oneHalf < threeQuarter should be(true)
         }
-        scenario("should return true when 3/4 < 3/4") {
+        scenario("should return false when 3/4 < 3/4") {
           threeQuarter < threeQuarter should be(false)
         }
-        scenario("should return true when 3/4 < 1/4") {
+        scenario("should return false when 3/4 < 1/4") {
           threeQuarter < oneHalf should be(false)
         }
 
@@ -162,21 +162,21 @@ class RationalSpecs extends FeatureSpec with GivenWhenThen with Matchers {
         scenario("should return true when 3/4 <= 3/4") {
           threeQuarter <= threeQuarter should be(true)
         }
-        scenario("should return true when 3/4 <= 1/3") {
+        scenario("should return false when 3/4 <= 1/3") {
           threeQuarter <= oneHalf should be(false)
         }
 
-        scenario("should return true when 1/2 > 3/4") {
+        scenario("should return false when 1/2 > 3/4") {
           oneHalf > threeQuarter should be(false)
         }
-        scenario("should return true when 3/4 > 3/4") {
+        scenario("should return false when 3/4 > 3/4") {
           threeQuarter > threeQuarter should be(false)
         }
         scenario("should return true when 3/4 > 1/4") {
           threeQuarter > oneHalf should be(true)
         }
 
-        scenario("should return true when 1/2 >=  3/4") {
+        scenario("should return false when 1/2 >=  3/4") {
           oneHalf >= threeQuarter should be(false)
         }
         scenario("should return true when 3/4 >= 3/4") {
@@ -186,7 +186,7 @@ class RationalSpecs extends FeatureSpec with GivenWhenThen with Matchers {
           threeQuarter >= oneHalf should be(true)
         }
 
-        scenario("should return true when -3/4 >=  3/4") {
+        scenario("should return false when -3/4 >=  3/4") {
           -threeQuarter >= threeQuarter should be(false)
         }
         scenario("should return true when -3/4 >= -3/4") {
@@ -196,7 +196,7 @@ class RationalSpecs extends FeatureSpec with GivenWhenThen with Matchers {
           threeQuarter >= -threeQuarter should be(true)
         }
       }
-
+/*
       feature("functions") {
         scenario("max function"){
           Rational.max(oneHalf, threeQuarter) should equal(threeQuarter)
