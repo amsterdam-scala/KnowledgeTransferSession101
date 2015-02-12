@@ -22,6 +22,29 @@ class Rational(val numerator: Int, val denominator: Int = 1) {
   if (denominator == 0)
     throw new IllegalArgumentException("Denominator must be non-zero") with NoStackTrace
   
+  /** Returns this value, unmodified. */
+  def unary_+ = this
+
+  /** Returns the negation of this value. */
+  def unary_- = new Rational(-numerator, denominator)
+
+  /** Returns the sum of this value and `x`. */
+  def +(x: Rational) =
+    Rational(x.numerator * this.denominator + this.numerator * x.denominator,
+      this.denominator * x.denominator)
+
+  /** Returns the difference of this value and `x`. */
+  def -(x: Rational) = this + -x
+
+  /** Returns the product of this value and `x`. */
+  def *(x: Rational) = this / (1 / x)
+
+  /** Returns the quotient of this value and `x`. */
+  def /(x: Rational) = Rational(numerator * x.denominator, denominator * x.numerator)
+
+  /** Returns `true` if this value is equal to x, `false` otherwise. */
+  def ==(x: Rational) = (x.numerator, x.denominator) ==(numerator, denominator)
+
   /** Returns a representation in text. */
   override def toString = numerator + "/" + denominator
 }

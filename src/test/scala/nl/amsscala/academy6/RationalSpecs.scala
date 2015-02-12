@@ -53,7 +53,7 @@ class RationalSpecs extends FeatureSpec with GivenWhenThen with Matchers {
       new Rational(3, 4).toString should be("3/4")
     }
   }
-  /*
+
     val oneQuarter = new Rational(1, 4)
     val oneHalf = Rational(1, 2)
     val oneThird = new Rational(1, 3)
@@ -144,7 +144,7 @@ class RationalSpecs extends FeatureSpec with GivenWhenThen with Matchers {
         x + (x * y) should equal(new Rational(5, 6))
       }
     }
-
+    /*
       feature("comparations") {
         scenario("should return true when 1/2 < 3/4") {
           oneHalf < threeQuarter should be(true)
