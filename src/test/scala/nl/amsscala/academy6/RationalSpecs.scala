@@ -196,13 +196,14 @@ class RationalSpecs extends FeatureSpec with GivenWhenThen with Matchers {
           threeQuarter >= -threeQuarter should be(true)
         }
       }
-/*
+
+      // Sprint 05 Functions
       feature("functions") {
-        scenario("max function"){
+        scenario("max function of 1/2 and 3/4 should be 3/4"){
           Rational.max(oneHalf, threeQuarter) should equal(threeQuarter)
         }
-        scenario("min function"){
+        scenario("min function of 1/2 and 3/4 should be 1/2"){
           Rational.min(oneHalf, threeQuarter) should equal(oneHalf)
         }
-      }*/
+      }
 }

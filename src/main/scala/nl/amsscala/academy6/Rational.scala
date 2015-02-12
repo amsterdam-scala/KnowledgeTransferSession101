@@ -81,6 +81,13 @@ object Rational {
   }
 
   def apply(wholeNumber: Int) = new Rational(wholeNumber)
+      
+  // Returns the greater of two Rational values.
+  def max(a: Rational, b: Rational) = if (a < b) b else a
+      
+  // Returns the smaller of two Rational values.
+  def min(a: Rational, b: Rational) = if (a < b) a else b
 
+  // Implicit conversion when Int is found but Rational is required
   implicit def intToRational(n: Int): Rational = Rational(n)
 }
